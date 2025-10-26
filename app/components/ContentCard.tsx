@@ -21,7 +21,9 @@ const ContentCard = ( {content}:{content: Content} ) => {
             <Link to={`/content/${content.id}`} className="resume-card animation-in fade-in duration-1000">
                 <div className="resume-card-header">
                     <div className="flex flex-col gap-2">
-                        Content
+                        <h2 className=" !text-black font-bold break-words">
+                            {content.title}
+                        </h2>
                     </div>
                     <div className="flex-shrink-0">
                         <ScoreCircle score={content.feedback.overallScore} />

@@ -16,7 +16,7 @@ const Upload = () => {
     const handleFileSelect = (file: File | null) => {
         setFile(file)
     }
-    const handleAnalyze = async({content,file}: {content: string, file: File}) => {
+    const handleAnalyze = async({title,content,file}: {title:string,content: string, file: File}) => {
         setIsProcessing(true);
         setStatusText("Uploading File...")
         const uploadFile = await fs.upload([file])
@@ -40,6 +40,7 @@ const Upload = () => {
         const uuid = generateUUID()
         const data = {
             id:uuid,
+            title:title,
             contentPath: uploadedImage.path,
             imagePath: uploadedImage.path,
             content: content,
@@ -66,10 +67,10 @@ const Upload = () => {
         const form = e.currentTarget.closest('form');
         if(!form) return;
         const formData = new FormData(form);
-
+        const title = formData.get('title') as string;
         const content = formData.get('content') as string;
         if(!file) return;
-        handleAnalyze({content, file})
+        handleAnalyze({title,content, file})
     }
     return(
         <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -87,6 +88,10 @@ const Upload = () => {
                     )}
                     {!isProcessing && (
                         <form id="upload-form" onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
+                            <div className="form-div">
+                                <label htmlFor="company-name">Content Title</label>
+                                <input type="text" name="title" id="title" placeholder="Title" />
+                            </div>
                             <div className="form-div">
                                 <label htmlFor="job-title">Content</label>
                                 <textarea rows={16} name="content" id="content" placeholder="Paste Content Here" />

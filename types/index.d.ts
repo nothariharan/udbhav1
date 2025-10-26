@@ -2,8 +2,7 @@
 
 interface Content {
     id: string;
-    companyName?: string;
-    jobTitle?: string;
+    title: string;
     imagePath: string;
     contentPath: string;
     feedback: Feedback;
