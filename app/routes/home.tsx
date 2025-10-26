@@ -26,13 +26,13 @@ export default function Home() {
 
     useEffect(() => {
         const loadContents = async () => {
-            const resumes = (await kv.list('resume:*',true)) as KVItem[]
-            const parsedResumes = resumes?.map((resume) => (
-                JSON.parse(resume.value) as Resume
+            const contents = (await kv.list('content:*',true)) as KVItem[]
+            const parsedContents = contents?.map((content) => (
+                JSON.parse(content.value) as Content
             ))
-            console.log("parsedREsumes",parsedResumes)
-            setResumes(parsedResumes || [])
-            setLoadingResumes(false)
+            console.log("parsedREsumes",parsedContents)
+            setContents(parsedContents || [])
+            setLoadingContents(false)
         }
         loadContents()
     }, []);
