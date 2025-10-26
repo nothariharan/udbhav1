@@ -30,9 +30,9 @@ const ContentCard = ( {content}:{content: Content} ) => {
 
 
                 {contentUrl && (
-                    <div className=" gradient-border animate-in fade-in duration-1000">
+                    <div className="gradient-border animate-in fade-in duration-1000">
                         <div className="w-full h-full">
-                            <img src={contentUrl} alt="resume" className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"/>
+                            <img src={contentUrl} alt="image" className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"/>
                         </div>
                     </div>
                 )}
@@ -41,4 +41,4 @@ const ContentCard = ( {content}:{content: Content} ) => {
     );
 };
 
-export default ResumeCard;
+export default ContentCard;
