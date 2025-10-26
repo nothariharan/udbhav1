@@ -8,7 +8,7 @@ const Navbar:() => Element = () => {
             </Link>
 
             <Link to="/upload" className="primary-button w-fit">
-                Upload Resume
+                Upload Content
             </Link>
         </nav>
     )

@@ -30,7 +30,7 @@ export default function Home() {
             const parsedContents = contents?.map((content) => (
                 JSON.parse(content.value) as Content
             ))
-            console.log("parsedREsumes",parsedContents)
+            console.log("parsedContents",parsedContents)
             setContents(parsedContents || [])
             setLoadingContents(false)
         }
