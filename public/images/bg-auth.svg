@@ -1,0 +1,36 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <radialGradient id="gradient0" cx="32.432429645947984%" cy="4.273835583378506%" r="50%">
+      <stop offset="0%" stop-color="#fd79a8" />
+      <stop offset="100%" stop-color="#fd79a8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="gradient1" cx="46.57156856912503%" cy="95.70113462288478%" r="50%">
+      <stop offset="0%" stop-color="#45b7d1" />
+      <stop offset="100%" stop-color="#45b7d1" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="gradient2" cx="0%" cy="48.764005432286666%" r="50%">
+      <stop offset="0%" stop-color="#6c5ce7" />
+      <stop offset="100%" stop-color="#6c5ce7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="gradient3" cx="84.48448090295372%" cy="29.18833069876708%" r="50%">
+      <stop offset="0%" stop-color="#ed9c8a" />
+      <stop offset="100%" stop-color="#ed9c8a" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="65" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#ffffff" />
+  
+  <!-- Single gradient container with all layers -->
+  <g opacity="0.58" filter="url(#blur)">
+    
+    <rect width="1920" height="1080" fill="url(#gradient3)" style="mix-blend-mode: normal;" />
+    <rect width="1920" height="1080" fill="url(#gradient2)" style="mix-blend-mode: normal;" />
+    <rect width="1920" height="1080" fill="url(#gradient1)" style="mix-blend-mode: normal;" />
+    <rect width="1920" height="1080" fill="url(#gradient0)" style="mix-blend-mode: normal;" />
+  </g>
+</svg>
